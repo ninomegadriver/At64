@@ -5,7 +5,7 @@
  * 
  * License: GPL 3.0 Mixed
  * 
- * Arduino stketch to turn an AtMega328 board into
+ * Arduino sketch to turn an AtMega328 board into
  * a N64 Controller.
  * 
  * IMPORTANT: Use a logic level converter to connect
