@@ -51,7 +51,8 @@
  *  
  *  A5     => If connected to ground, directional routed to analog stick
  *            If left as is, direction routed to digital pad
- *  
+ *            
+ *  TODO: Get fix and get rid of all the warnings
  */
 
 #include <Arduino.h>
