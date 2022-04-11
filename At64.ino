@@ -35,10 +35,10 @@
  *  
  *  [Arduino] [N64 Button]
  *  3      => START
- *  4      => Up
- *  5      => Down
- *  6      => Left
- *  7      => Right
+ *  4      => Up    (see A5 bellow)
+ *  5      => Down  (see A5 bellow)
+ *  6      => Left  (see A5 bellow)
+ *  7      => Right (see A5 bellow)
  *  8      => Button B
  *  9      => C Left
  *  10     => C Up
@@ -50,7 +50,7 @@
  *  A2     => Right Shoulder
  *  
  *  A5     => If connected to ground, directional routed to analog stick
- *            If left as is, direction routed to digital pad
+ *            If left as is (HIGH), direction routed to digital pad
  *            
  *  TODO: Fix the code and get rid of all the warnings
  */
