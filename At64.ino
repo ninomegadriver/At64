@@ -59,6 +59,7 @@
 #include "n64.h"
 
 // N64 controller buttons bits
+// PORT A
 #define BTN_A  0b10000000
 #define BTN_B  0b01000000
 #define BTN_Z  0b00100000
@@ -67,6 +68,7 @@
 #define DDOWN  0b00000100
 #define DLEFT  0b00000010
 #define DRIGHT 0b00000001
+// PORT B
 #define BTN_L  0b00100000
 #define BTN_R  0b00010000
 #define CUP    0b00001000
