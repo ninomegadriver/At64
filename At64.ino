@@ -29,7 +29,7 @@
  *  
  *  GND    => Logic level converter "high" ground
  *  +5     => Logic level converter "high" vcc
- *  2      => Logic level converter "low" input
+ *  2      => Logic level converter "high" input
  *  
  *  Input pins [pulled high]:
  *  
