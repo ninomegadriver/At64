@@ -142,7 +142,7 @@ nopManual(N) /* N % 3 manual nops */
 
 
 void n64_send(const uint8_t* buff, uint8_t len,
-     uint8_t* modePort,  uint8_t* outPort, uint8_t bitMask)
+    volatile uint8_t* modePort, volatile uint8_t* outPort, uint8_t bitMask)
 {
 
     // set pin to output, default high
@@ -153,7 +153,7 @@ void n64_send(const uint8_t* buff, uint8_t len,
     register uint8_t bitCount;
     register uint8_t data;
     register uint8_t nop;
-    asm  (
+    asm volatile (
         "; Start of gc_n64_send assembly\n"
 
         // passed in to this block are:
@@ -263,11 +263,11 @@ void n64_send(const uint8_t* buff, uint8_t len,
         [low] "r" (*outPort & ~bitMask) // this works because we turn interrupts off
 
         // no clobbers
-        ); // end of asm 
+        ); // end of asm volatile
 }
 
 uint8_t n64_get(uint8_t* buff, uint8_t len,
-     uint8_t* modePort,  uint8_t* outPort,  uint8_t * inPort, uint8_t bitMask)
+    volatile uint8_t* modePort, volatile uint8_t* outPort, volatile uint8_t * inPort, uint8_t bitMask)
 {
     // prepare pin for input with pullup
     *modePort &= ~bitMask;
@@ -281,7 +281,7 @@ uint8_t n64_get(uint8_t* buff, uint8_t len,
     register uint8_t receivedBytes; // the return value of the function
     register uint8_t initialTimeoutCount; // extra timeout count for initial function call
 
-    asm  (
+    asm volatile (
         "; Start of gc_n64_get assembly\n"
 
         // [bitCount] is our bit counter. We read %[len] bytes
