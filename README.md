@@ -2,3 +2,4 @@
   
 
 ![At64 Schematic](https://raw.githubusercontent.com/ninomegadriver/At64/main/At64_Schematic.png)
+![N64 Controller Pinout](https://raw.githubusercontent.com/ninomegadriver/At64/main/N64Pinout.jpg)  
